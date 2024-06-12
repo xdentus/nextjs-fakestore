@@ -1,14 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Navbar() {
   return (
     <div className="h-24 bg-slate-800 p-6 flex items-center justify-between">
-      <Image
-        src="/urban_essentials_dark_text.svg"
-        alt="store logo"
-        width={256}
-        height={128}
-      />
+      <Link href="/">
+        <Image
+          src="/urban_essentials_dark_text.svg"
+          alt="store logo"
+          width={256}
+          height={128}
+        />
+      </Link>
       <div className="flex items-center justify-center">
         <input
           type="text"
@@ -20,7 +23,9 @@ export function Navbar() {
         </button>
       </div>
       <div className="flex items-center justify-end w-64 h-16 gap-1">
-        <p className="text-white text-xl">Your Cart</p>
+        <p className="text-white text-xl lg:block md:hidden sm:hidden">
+          Your Cart
+        </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={48}
